@@ -1,0 +1,16 @@
+# Siempre buscar el lts más actual de bullseye-slim https://hub.docker.com/_/node/tags?page=1&name=bullseye-slim
+# Esto es por proyecto 
+
+FROM node:20.6-bullseye-slim as base
+
+USER root
+RUN apt-get update && apt-get install -y python3 make g++
+
+WORKDIR /usr/src/app
+# COPY ./app/package*.json ./
+COPY ./backend/ ./
+RUN npm install
+RUN npm install -g nodemon 
+RUN npm install -g babel-cli
+
+CMD [ "npm", "run", "dev" ]

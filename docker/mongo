@@ -1,0 +1,2 @@
+#Siempre buscar la última versión de focal https://hub.docker.com/_/mongo/tags?page=1&name=focal
+FROM mongo:5.0.27-focal

@@ -1,0 +1,13 @@
+# Siempre buscar el lts más actual de bullseye-slim https://hub.docker.com/_/node/tags?page=1&name=bullseye-slim
+# Esto es por proyecto 
+
+FROM node:20.6-bullseye-slim as base
+
+WORKDIR /usr/src/app
+# COPY ./app/package*.json ./
+COPY ./frontend/ ./
+
+RUN npm install
+RUN npm install -g serve
+
+CMD [ "npm", "run", "start" ]

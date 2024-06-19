@@ -1,3 +1,6 @@
+# Base de datos
+db_data
+
 # Logs
 logs
 *.log
@@ -35,6 +38,7 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+build
 build/Release
 
 # Dependency directories
@@ -102,3 +106,18 @@ dist
 
 # TernJS port file
 .tern-port
+
+# archivos
+src/data/filesUser/*
+!src/data/filesUser/.nofile
+
+src/data/imgsUser/*
+!src/data/imgsUser/.nofile
+
+# General
+/.pnp
+.pnp.js
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
